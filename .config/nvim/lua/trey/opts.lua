@@ -18,3 +18,7 @@ vim.opt.incsearch = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.colorcolumn = "80"
 vim.opt.scrolloff = 8
+
+vim.filetype.add({
+	extension = { templ = "templ" },
+})
