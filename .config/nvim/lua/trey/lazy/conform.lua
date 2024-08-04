@@ -1,23 +1,36 @@
 return {
-	"stevearc/conform.nvim",
-	event = { "BufWritePre" },
-	cmd = { "ConformInfo" },
-	keys = {
-		{
-			"<leader>bf",
-			function()
-				require("conform").format({ async = true, lsp_fallback = true })
-			end,
-			mode = { "n" },
+	{
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
+		keys = {
+			{
+				"<leader>bf",
+				function()
+					require("conform").format({ async = true, lsp_fallback = true })
+				end,
+				mode = { "n" },
+			},
+		},
+		opts = {
+			formatters_by_ft = {
+				lua = { "stylua" },
+				java = { "google-java-format" },
+			},
+			format_on_save = {
+				timeout_ms = 500,
+				lsp_fallback = true,
+			},
 		},
 	},
-	opts = {
-		formatters_by_ft = {
-			lua = { "stylua" },
+	{
+		"zapling/mason-conform.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+			"stevearc/conform.nvim",
 		},
-		format_on_save = {
-			timeout_ms = 500,
-			lsp_fallback = true,
-		},
+		config = function()
+			require("mason-conform").setup({})
+		end,
 	},
 }

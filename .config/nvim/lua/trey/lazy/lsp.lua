@@ -72,6 +72,7 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
+				"jdtls",
 			},
 
 			handlers = {
@@ -80,6 +81,7 @@ return {
 						capabilities = capabilities,
 					})
 				end,
+				jdtls = function() end,
 				lua_ls = function()
 					local lspconfig = require("lspconfig")
 					lspconfig.lua_ls.setup({
@@ -110,11 +112,12 @@ return {
 					require("luasnip").lsp_expand(args.body)
 				end,
 			},
+			preselect = cmp.PreselectMode.None,
 			mapping = cmp.mapping.preset.insert({
 				["<Tab>"] = cmp.mapping.select_prev_item(cmp_select),
 				["<S-Tab>"] = cmp.mapping.select_next_item(cmp_select),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
-				["<C>"] = cmp.mapping.complete(),
+				["<C-SPACE>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },

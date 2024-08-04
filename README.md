@@ -12,6 +12,11 @@ You should also totally watch me live on (Twitch)[https://twitch.tv/trey_bastian
 - git
 - zsh
 - tmux
+- sdkman
+
+### Configured Languages
+- lua
+- java
 
 ## Installation Instructions
 To install my dotfiles run this command. It will backup any pre-existing dotfiles.
