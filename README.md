@@ -1,4 +1,4 @@
-# Trey's Dotfiles
+# Trey's Dotfiles
 
 These are all of my dotfiles. This works for me, it might not work for you.
 I suggest taking these configurations and tweaking them to work for you.

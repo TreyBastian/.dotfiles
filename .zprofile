@@ -25,3 +25,5 @@ if [ "$ALACRITTY" = true ]; then
    theme "zenbones_light" 
   fi
 fi
+
+bindkey -s ^f "$HOME/.local/bin/tmux-sessionizer\n"
