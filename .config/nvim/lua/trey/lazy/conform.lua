@@ -18,6 +18,13 @@ return {
 				java = { "google-java-format" },
 				go = { "goimports", "gofmt" },
 				templ = { "templ" },
+				javascript = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescript = { "prettier" },
+				typescriptreact = { "prettier" },
+				json = { "prettier" },
+				html = { "prettier" },
+				css = { "prettier" },
 			},
 			format_on_save = {
 				timeout_ms = 500,

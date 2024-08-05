@@ -75,6 +75,13 @@ return {
 				"jdtls",
 				"gopls",
 				"templ",
+				"tsserver",
+				"emmet_ls",
+				"eslint",
+				"tailwindcss",
+				"jsonls",
+				"dockerls",
+				"bashls",
 			},
 
 			handlers = {
