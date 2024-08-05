@@ -82,6 +82,8 @@ return {
 				"jsonls",
 				"dockerls",
 				"bashls",
+				"elixirls",
+				"cobol_ls",
 			},
 
 			handlers = {
@@ -90,6 +92,7 @@ return {
 						capabilities = capabilities,
 					})
 				end,
+				elixirls = function() end,
 				jdtls = function() end,
 				lua_ls = function()
 					local lspconfig = require("lspconfig")
@@ -123,8 +126,8 @@ return {
 			},
 			preselect = cmp.PreselectMode.None,
 			mapping = cmp.mapping.preset.insert({
-				["<Tab>"] = cmp.mapping.select_prev_item(cmp_select),
-				["<S-Tab>"] = cmp.mapping.select_next_item(cmp_select),
+				["<Tab>"] = cmp.mapping.select_next_item(cmp_select),
+				["<S-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<C-SPACE>"] = cmp.mapping.complete(),
 			}),

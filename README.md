@@ -14,10 +14,13 @@ You should also totally watch me live on (Twitch)[https://twitch.tv/trey_bastian
 - git
 - zsh
 - tmux
-- sdkman
-- nvm
 
 ### Configured Languages
+   
+Configuration assumes you have everying required to run these langs.
+If you don't edit the conform, lsp, and remove any other plugins associated with
+languages you want to remove.
+
 - lua
   - lua-language-server
   - stylua
@@ -45,6 +48,13 @@ You should also totally watch me live on (Twitch)[https://twitch.tv/trey_bastian
 - json
   - prettier
   - jsonls
+- elixir 
+  - mix
+  - elixir-ls
+  - next-ls
+  - credo
+- COBOL
+  - cobol-language-support
 
 
 ## Installation Instructions
