@@ -27,3 +27,5 @@ if [ "$ALACRITTY" = true ]; then
 fi
 
 bindkey -s ^f "$HOME/.local/bin/tmux-sessionizer\n"
+
+export PATH=$PATH:$HOME/.composer/vendor/bin

@@ -43,6 +43,8 @@ languages you want to remove.
    - prettier
    - eslint
    - tsserver
+     - *vue support requires `@vue/typescript-plugin` to be installed globally*
+   - volar (vue)
 - bash
   - bashls
 - docker
@@ -52,6 +54,11 @@ languages you want to remove.
   - jsonls
 - COBOL
   - cobol-language-support
+- PHP
+  - intelephense
+  - laravel
+  - laravel-blade-nav
+  - pint
 
 
 ## Installation Instructions
@@ -62,4 +69,4 @@ curl -Lks https://raw.githubusercontent.com/TreyBastian/.dotfiles/master/bootstr
 ```
 
 ## TODO
-- bootstrap script auto install required software
+- bootstrap script auto install required software and dependencies

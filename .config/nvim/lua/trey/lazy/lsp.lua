@@ -83,6 +83,8 @@ return {
 				"dockerls",
 				"bashls",
 				"cobol_ls",
+				"intelephense",
+				"volar",
 			},
 
 			handlers = {
@@ -91,10 +93,51 @@ return {
 						capabilities = capabilities,
 					})
 				end,
+
 				jdtls = function() end,
+
+				intelephense = function()
+					require("lspconfig").intelephense.setup({
+						commands = {
+							IntelephenseIndex = {
+								function()
+									vim.lsp.buf.execute_command({ command = "intelephense.index.workspace" })
+								end,
+							},
+						},
+						on_attach = function(client, bufnr)
+							client.server_capabilities.documentFormattingProvider = false
+							client.server_capabilities.documentRangeFormattingProvider = false
+						end,
+						capabilities = capabilities,
+					})
+				end,
+
+				tsserver = function()
+					require("lspconfig").tsserver.setup({
+						init_options = {
+							plugins = {
+								{
+									name = "@vue/typescript-plugin",
+									location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+									languages = { "vue" },
+								},
+							},
+						},
+						filetypes = {
+							"javascript",
+							"javascriptreact",
+							"javascript.jsx",
+							"typescript",
+							"typescriptreact",
+							"typescript.tsx",
+							"vue",
+						},
+					})
+				end,
+
 				lua_ls = function()
-					local lspconfig = require("lspconfig")
-					lspconfig.lua_ls.setup({
+					require("lspconfig").lua_ls.setup({
 						capabilities = capabilities,
 						settings = {
 							Lua = {
