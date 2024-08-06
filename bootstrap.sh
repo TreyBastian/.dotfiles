@@ -1,3 +1,5 @@
+#!/bin/bash
+
 git clone --bare git@github.com:TreyBastian/.dotfiles.git $HOME/.dots
 function dots {
    git --git-dir=$HOME/.dots/ --work-tree=$HOME $@

@@ -65,7 +65,7 @@ languages you want to remove.
 To install my dotfiles run this command. It will backup any pre-existing dotfiles.
 
 ```bash
-curl -Lks https://raw.githubusercontent.com/TreyBastian/.dotfiles/master/bootstrap.sh | /bin/bash
+curl -Lks https://raw.githubusercontent.com/TreyBastian/.dotfiles/main/bootstrap.sh | /bin/bash
 ```
 
 ## TODO
