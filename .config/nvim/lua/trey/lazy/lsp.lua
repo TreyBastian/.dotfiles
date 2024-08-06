@@ -82,7 +82,6 @@ return {
 				"jsonls",
 				"dockerls",
 				"bashls",
-				"elixirls",
 				"cobol_ls",
 			},
 
@@ -92,7 +91,6 @@ return {
 						capabilities = capabilities,
 					})
 				end,
-				elixirls = function() end,
 				jdtls = function() end,
 				lua_ls = function()
 					local lspconfig = require("lspconfig")

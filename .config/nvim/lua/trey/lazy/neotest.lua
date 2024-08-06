@@ -5,13 +5,17 @@ return {
 		"nvim-lua/plenary.nvim",
 		"antoinemadec/FixCursorHold.nvim",
 		"nvim-treesitter/nvim-treesitter",
-		"jfpedroza/neotest-elixir",
+		"rcasia/neotest-java",
+		"nvim-neotest/neotest-go",
+		"V13Axel/neotest-pest",
 	},
 	config = function()
 		local neotest = require("neotest")
 		neotest.setup({
 			adapters = {
-				require("neotest-elixir"),
+				require("neotest-java"),
+				require("neotest-go"),
+				require("neotest-pest"),
 			},
 		})
 

@@ -27,10 +27,12 @@ languages you want to remove.
 - java
   - jdtls
   - google-java-format
+  - neotest support
 - go
   - templ
   - goimports
   - gopls
+  - neotest support
 - tailwind
   - prettier
   - tailwindcss-language-server
@@ -48,11 +50,6 @@ languages you want to remove.
 - json
   - prettier
   - jsonls
-- elixir 
-  - mix
-  - elixir-ls
-  - next-ls
-  - credo
 - COBOL
   - cobol-language-support
 
