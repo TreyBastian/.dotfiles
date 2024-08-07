@@ -3,7 +3,7 @@
 These are all of my dotfiles. This works for me, it might not work for you.
 I suggest taking these configurations and tweaking them to work for you.
 
-You should also totally watch me live on (Twitch)[https://twitch.tv/trey_bastian]
+You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian)
 
 ## Applications You Need
 - Ripgrep
@@ -70,3 +70,8 @@ curl -Lks https://raw.githubusercontent.com/TreyBastian/.dotfiles/main/bootstrap
 
 ## TODO
 - bootstrap script auto install required software and dependencies
+
+## Acknowledgements
+This configuration takes various inspiration from:
+- [ThePrimagen](https://github.com/theprimeagen) - Vim / Tmux
+- [Jess Archer](https://github.com/jessarcher) - PHP and Vue
