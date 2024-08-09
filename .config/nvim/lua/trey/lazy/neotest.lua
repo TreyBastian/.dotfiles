@@ -8,6 +8,7 @@ return {
 		"rcasia/neotest-java",
 		"nvim-neotest/neotest-go",
 		"V13Axel/neotest-pest",
+		"sidlatau/neotest-dart",
 	},
 	config = function()
 		local neotest = require("neotest")
@@ -16,6 +17,7 @@ return {
 				require("neotest-java"),
 				require("neotest-go"),
 				require("neotest-pest"),
+				require("neotest-dart"),
 			},
 		})
 

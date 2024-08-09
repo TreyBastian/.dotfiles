@@ -26,4 +26,12 @@ return {
 		},
 		ft = { "blade", "php" },
 	},
+	-- {
+	-- 	dir = "~/dev/blade-nav.nvim",
+	-- 	dependencies = {
+	-- 		"hrsh7th/nvim-cmp",
+	-- 	},
+	-- 	ft = { "blade", "php" },
+	-- 	dev = true,
+	-- },
 }

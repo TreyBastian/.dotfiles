@@ -59,6 +59,12 @@ languages you want to remove.
   - laravel
   - laravel-blade-nav
   - pint
+  - neotest support
+- Dart / Flutter
+  - flutter-tools
+  - dart_ls
+  - dart_formatter
+  - neotest support
 
 
 ## Installation Instructions

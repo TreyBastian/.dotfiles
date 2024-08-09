@@ -27,6 +27,7 @@ return {
 				css = { "prettier" },
 				php = { "pint" },
 				vue = { "prettier" },
+				dart = { "dart_format" },
 			},
 			format_on_save = {
 				timeout_ms = 500,
