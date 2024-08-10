@@ -1,5 +1,7 @@
 if [[ $(uname) == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  export PATH=$PATH:$HOME/.rbenv/bin
+  eval "$(rbenv init -)" 
 fi
 
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
