@@ -11,6 +11,7 @@ return {
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"j-hui/fidget.nvim",
+		"nvim-telescope/telescope.nvim",
 	},
 
 	config = function()
@@ -53,7 +54,7 @@ return {
 					vim.lsp.buf.type_definition()
 				end, opts)
 				vim.keymap.set("n", "gr", function()
-					vim.lsp.buf.references()
+					require("telescope.builtin").lsp_references()
 				end, opts)
 				vim.keymap.set("n", "gs", function()
 					vim.lsp.buf.signature_help()
