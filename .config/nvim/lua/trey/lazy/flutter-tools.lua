@@ -5,6 +5,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"stevearc/dressing.nvim",
 		"hrsh7th/cmp-nvim-lsp",
+		"nvim-telescope/telescope.nvim",
 	},
 	config = function()
 		local cmp_lsp = require("cmp_nvim_lsp")
@@ -20,5 +21,7 @@ return {
 				capabilities = capabilities,
 			},
 		})
+
+		vim.keymap.set("n", "<leader>ft", "<CMD>lua require('telescope').extensions.flutter.commands()<CR>")
 	end,
 }
