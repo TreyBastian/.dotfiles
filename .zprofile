@@ -32,3 +32,4 @@ bindkey -s ^f "$HOME/.local/bin/tmux-sessionizer\n"
 
 export PATH=$PATH:$HOME/.composer/vendor/bin
 export PATH=$PATH:$HOME/.local/flutter/bin
+export PATH=$PATH:$HOME/go/bin

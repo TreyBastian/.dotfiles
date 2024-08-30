@@ -16,11 +16,11 @@ size = 15.0
 
 [font.normal]
 family = "SauceCodePro Nerd Font"
-style = "Medium"
+style = "SemiBold"
 
 [font.bold]
 family = "SauceCodePro Nerd Font"
-  style = "Heavy"
+style = "Heavy"
 
 [font.bold_italic]
 family = "SauceCodePro Nerd Font"
