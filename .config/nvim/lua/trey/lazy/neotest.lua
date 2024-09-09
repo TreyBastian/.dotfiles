@@ -9,6 +9,8 @@ return {
 		"nvim-neotest/neotest-go",
 		"V13Axel/neotest-pest",
 		"sidlatau/neotest-dart",
+		"nvim-neotest/neotest-jest",
+		"marilari88/neotest-vitest",
 	},
 	config = function()
 		local neotest = require("neotest")
@@ -18,6 +20,8 @@ return {
 				require("neotest-go"),
 				require("neotest-pest"),
 				require("neotest-dart"),
+				require("neotest-jest"),
+				require("neotest-vitest"),
 			},
 		})
 

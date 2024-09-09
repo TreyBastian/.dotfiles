@@ -10,7 +10,7 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 - fzf
 - Neovim
 - tree-sitter
-- Alacritty
+- Wezterm 
 - git
 - zsh
 - tmux
@@ -42,9 +42,10 @@ languages you want to remove.
 - javascript / typescript
    - prettier
    - eslint
-   - tsserver
+   - ts_ls
      - *vue support requires `@vue/typescript-plugin` to be installed globally*
    - volar (vue)
+   - neotest support (jest and vitest) 
 - bash
   - bashls
 - docker
@@ -59,7 +60,7 @@ languages you want to remove.
   - laravel
   - laravel-blade-nav
   - pint
-  - neotest support
+  - neotest support (pest)
 - Dart / Flutter
   - flutter-tools
   - dart_ls
