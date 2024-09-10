@@ -5,6 +5,10 @@ if [[ $(uname) == "Darwin" ]]; then
   eval "$(rbenv init -)" 
 fi
 
+if [[ $(uname -a ) == *"WSL"* ]]; then
+  export TMUX_TMPDIR="/tmp"
+fi
+
 alias dots='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 
 bindkey -s ^f "$HOME/.local/bin/tmux-sessionizer\n"
