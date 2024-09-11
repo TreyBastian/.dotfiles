@@ -85,6 +85,7 @@ return {
 				"bashls",
 				"cobol_ls",
 				"intelephense",
+				"astro",
 				"volar",
 			},
 
