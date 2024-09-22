@@ -28,6 +28,8 @@ return {
 				php = { "pint" },
 				vue = { "prettier" },
 				dart = { "dart_format" },
+				eruby = { "erb_format" },
+				ruby = { "rubocop" },
 			},
 			format_on_save = {
 				timeout_ms = 500,

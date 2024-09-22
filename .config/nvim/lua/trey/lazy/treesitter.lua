@@ -8,6 +8,7 @@ return {
 	main = "nvim-treesitter.configs",
 	build = ":TSUpdate",
 	opts = {
+		ensure_installed = { "embedded_template" },
 		sync_install = false,
 		auto_install = true,
 		highlight = {

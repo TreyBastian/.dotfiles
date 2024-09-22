@@ -39,6 +39,8 @@ languages you want to remove.
 - html / css
   - prettier
   - emmet_ls
+  - html-lsp
+  - css-lsp
 - javascript / typescript
    - prettier
    - eslint
@@ -66,6 +68,11 @@ languages you want to remove.
   - dart_ls
   - dart_formatter
   - neotest support
+- Ruby
+  - ruby_lsp
+  - rubocop
+  - erb_formatter
+  - neotest support (rspec)
 
 
 ## Installation Instructions

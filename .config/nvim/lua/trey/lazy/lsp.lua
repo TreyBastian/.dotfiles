@@ -78,6 +78,8 @@ return {
 				"templ",
 				"ts_ls",
 				"emmet_ls",
+				"cssls",
+				"html",
 				"eslint",
 				"tailwindcss",
 				"jsonls",
@@ -87,6 +89,7 @@ return {
 				"intelephense",
 				"astro",
 				"volar",
+				"ruby_lsp",
 			},
 
 			handlers = {
@@ -139,6 +142,19 @@ return {
 							"typescript.tsx",
 							"vue",
 						},
+					})
+				end,
+
+				html = function()
+					require("lspconfig").html.setup({
+						capabilities = capabilities,
+						filetypes = { "html", "eruby", "blade", "templ" },
+					})
+				end,
+				ruby_lsp = function()
+					require("lspconfig").ruby_lsp.setup({
+						capabilities = capabilities,
+						filetypes = { "ruby", "eruby" },
 					})
 				end,
 
