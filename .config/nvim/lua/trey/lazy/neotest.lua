@@ -12,6 +12,7 @@ return {
 		"nvim-neotest/neotest-jest",
 		"marilari88/neotest-vitest",
 		"olimorris/neotest-rspec",
+		"zidhuss/neotest-minitest",
 	},
 	config = function()
 		local neotest = require("neotest")
@@ -24,6 +25,7 @@ return {
 				require("neotest-jest"),
 				require("neotest-vitest"),
 				require("neotest-rspec"),
+				require("neotest-minitest"),
 			},
 		})
 
