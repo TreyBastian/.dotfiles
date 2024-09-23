@@ -1,9 +1,10 @@
 if [[ $(uname) == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  export PATH=$PATH:$HOME/.rbenv/bin
-  export PATH=$PATH:$HOME/.rbenv/shims
-  eval "$(rbenv init -)" 
 fi
+
+export PATH=$PATH:$HOME/.rbenv/bin
+export PATH=$PATH:$HOME/.rbenv/shims
+eval "$(rbenv init -)" 
 
 if [[ $(uname -a ) == *"WSL"* ]]; then
   export TMUX_TMPDIR="/tmp"
