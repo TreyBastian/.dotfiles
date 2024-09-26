@@ -1,11 +1,11 @@
 return {
 	{
-		"zenbones-theme/zenbones.nvim",
-		dependencies = { { "rktjmp/lush.nvim" } },
+		"catppuccin/nvim",
+		name = "catppuccin",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("zenbones")
+			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
 	{
