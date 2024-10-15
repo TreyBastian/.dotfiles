@@ -13,7 +13,6 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 - Wezterm 
 - git
 - zsh
-- tmux
 
 ### Configured Languages
    
@@ -63,11 +62,6 @@ languages you want to remove.
   - laravel-blade-nav
   - pint
   - neotest support (pest)
-- Dart / Flutter
-  - flutter-tools
-  - dart_ls
-  - dart_formatter
-  - neotest support
 - Ruby
   - ruby_lsp
   - rubocop
@@ -87,5 +81,5 @@ curl -Lks https://raw.githubusercontent.com/TreyBastian/.dotfiles/main/bootstrap
 
 ## Acknowledgements
 This configuration takes various inspiration from:
-- [ThePrimagen](https://github.com/theprimeagen) - Vim / Tmux
+- [ThePrimagen](https://github.com/theprimeagen) - Vim
 - [Jess Archer](https://github.com/jessarcher) - PHP and Vue

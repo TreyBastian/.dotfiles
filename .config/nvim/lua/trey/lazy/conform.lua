@@ -27,7 +27,6 @@ return {
 				css = { "prettier" },
 				php = { "pint" },
 				vue = { "prettier" },
-				dart = { "dart_format" },
 				ruby = { "rubocop" },
 			},
 			format_on_save = {

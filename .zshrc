@@ -70,7 +70,7 @@ ZSH_THEME="minimal"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm)
+plugins=(git nvm rails ruby brew gem)
 
 source $ZSH/oh-my-zsh.sh
 
