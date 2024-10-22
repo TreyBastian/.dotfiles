@@ -1,6 +1,7 @@
 return {
 	{
 		"adalessa/laravel.nvim",
+		version = "2.2.2",
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 			"tpope/vim-dotenv",
