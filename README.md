@@ -13,6 +13,9 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 - Wezterm 
 - git
 - zsh
+- nvm
+- sdkman
+- rbenv
 
 ### Configured Languages
    
@@ -58,7 +61,7 @@ languages you want to remove.
   - cobol-language-support
 - PHP
   - intelephense
-  - laravel
+  - laravel (version pinned need to fix breaking changes)
   - laravel-blade-nav
   - pint
   - neotest support (pest)
