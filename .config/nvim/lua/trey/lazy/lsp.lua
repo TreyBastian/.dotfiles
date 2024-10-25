@@ -90,6 +90,7 @@ return {
 				"astro",
 				"volar",
 				"ruby_lsp",
+				"svelte",
 			},
 
 			handlers = {

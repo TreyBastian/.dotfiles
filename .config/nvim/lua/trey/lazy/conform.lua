@@ -28,6 +28,7 @@ return {
 				php = { "pint" },
 				vue = { "prettier" },
 				ruby = { "rubocop" },
+				svelte = { "prettier" },
 			},
 			format_on_save = {
 				timeout_ms = 1001,

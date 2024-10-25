@@ -49,6 +49,7 @@ languages you want to remove.
    - ts_ls
      - *vue support requires `@vue/typescript-plugin` to be installed globally*
    - volar (vue)
+   - svelte
    - neotest support (jest and vitest) 
 - bash
   - bashls
