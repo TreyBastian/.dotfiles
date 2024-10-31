@@ -26,8 +26,10 @@ return {
 				html = { "prettier" },
 				css = { "prettier" },
 				php = { "pint" },
+				blade = { "blade-formatter" },
 				vue = { "prettier" },
 				ruby = { "rubocop" },
+				eruby = { "erb_format" },
 				svelte = { "prettier" },
 			},
 			format_on_save = {

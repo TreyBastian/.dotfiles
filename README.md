@@ -62,7 +62,7 @@ languages you want to remove.
   - cobol-language-support
 - PHP
   - intelephense
-  - laravel (version pinned need to fix breaking changes)
+  - laravel
   - laravel-blade-nav
   - pint
   - neotest support (pest)
