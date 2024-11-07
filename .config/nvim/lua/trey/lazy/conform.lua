@@ -31,6 +31,7 @@ return {
 				ruby = { "rubocop" },
 				eruby = { "erb_format" },
 				svelte = { "prettier" },
+				astro = { "prettier" },
 			},
 			format_on_save = {
 				timeout_ms = 1001,
