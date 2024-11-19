@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("x", "p", [["_dP]])
-vim.keymap.set("i", ";;", "<Esc>A;<Esc>")
-vim.keymap.set("i", ",,", "<Esc>A,<Esc>")
 
 vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")

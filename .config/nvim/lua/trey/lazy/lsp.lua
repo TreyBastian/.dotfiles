@@ -145,13 +145,6 @@ return {
 						},
 					})
 				end,
-
-				html = function()
-					require("lspconfig").html.setup({
-						capabilities = capabilities,
-						filetypes = { "html", "eruby", "blade", "templ" },
-					})
-				end,
 				ruby_lsp = function()
 					require("lspconfig").ruby_lsp.setup({
 						capabilities = capabilities,
@@ -208,7 +201,7 @@ return {
 				focusable = false,
 				style = "minimal",
 				border = "rounded",
-				source = "always",
+				source = true,
 				header = "",
 				prefix = "",
 			},
