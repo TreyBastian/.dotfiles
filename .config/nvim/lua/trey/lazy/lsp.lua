@@ -183,8 +183,6 @@ return {
 			},
 			preselect = cmp.PreselectMode.None,
 			mapping = cmp.mapping.preset.insert({
-				["<Tab>"] = cmp.mapping.select_next_item(cmp_select),
-				["<S-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
 				["<C-SPACE>"] = cmp.mapping.complete(),
 			}),
