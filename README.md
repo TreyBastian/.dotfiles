@@ -71,6 +71,9 @@ languages you want to remove.
   - rubocop
   - erb_formatter
   - neotest support (rspec)
+- Fortran
+  - fortran-language-server
+  - findent (formatter)
 
 
 ## Installation Instructions

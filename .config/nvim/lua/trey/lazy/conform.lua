@@ -31,6 +31,7 @@ return {
 				ruby = { "rubocop" },
 				eruby = { "erb_format" },
 				svelte = { "prettier" },
+				fortran = { "findent" },
 				astro = { "prettier" },
 			},
 			format_on_save = {

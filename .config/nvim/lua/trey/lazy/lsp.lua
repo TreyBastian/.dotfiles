@@ -91,6 +91,7 @@ return {
 				"volar",
 				"ruby_lsp",
 				"svelte",
+				"fortls",
 			},
 
 			handlers = {
