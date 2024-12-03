@@ -92,6 +92,7 @@ return {
 				"ruby_lsp",
 				"svelte",
 				"fortls",
+				"ocamllsp",
 			},
 
 			handlers = {

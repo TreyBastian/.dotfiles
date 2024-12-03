@@ -16,6 +16,7 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 - nvm
 - sdkman
 - rbenv
+- opm
 
 ### Configured Languages
    
@@ -74,6 +75,9 @@ languages you want to remove.
 - Fortran
   - fortran-language-server
   - findent (formatter)
+- Ocaml
+    - ocaml-lsp
+    - ocamlformat
 
 
 ## Installation Instructions

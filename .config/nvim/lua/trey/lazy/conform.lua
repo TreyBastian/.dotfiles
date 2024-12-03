@@ -33,6 +33,7 @@ return {
 				svelte = { "prettier" },
 				fortran = { "findent" },
 				astro = { "prettier" },
+				ocaml = { "ocamlformat" },
 			},
 			format_on_save = {
 				timeout_ms = 1001,
