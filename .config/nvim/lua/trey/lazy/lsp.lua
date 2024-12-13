@@ -1,3 +1,4 @@
+local langs = require("trey.languages")
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
@@ -71,111 +72,15 @@ return {
 		require("fidget").setup({})
 		require("mason").setup()
 		require("mason-lspconfig").setup({
-			ensure_installed = {
-				"lua_ls",
-				"jdtls",
-				"gopls",
-				"templ",
-				"ts_ls",
-				"emmet_ls",
-				"cssls",
-				"html",
-				"eslint",
-				"tailwindcss",
-				"jsonls",
-				"dockerls",
-				"bashls",
-				"cobol_ls",
-				"intelephense",
-				"astro",
-				"volar",
-				"ruby_lsp",
-				"svelte",
-				"fortls",
-				"ocamllsp",
-			},
+			ensure_installed = langs.servers,
 
 			handlers = {
 				function(server_name)
-					require("lspconfig")[server_name].setup({
-						capabilities = capabilities,
-					})
-				end,
-
-				jdtls = function() end,
-
-				intelephense = function()
-					require("lspconfig").intelephense.setup({
-						commands = {
-							IntelephenseIndex = {
-								function()
-									vim.lsp.buf.execute_command({ command = "intelephense.index.workspace" })
-								end,
-							},
-						},
-						on_attach = function(client, bufnr)
-							client.server_capabilities.documentFormattingProvider = false
-							client.server_capabilities.documentRangeFormattingProvider = false
-						end,
-						capabilities = capabilities,
-					})
-				end,
-
-				ts_ls = function()
-					local vue_typescript_plugin = require("mason-registry")
-						.get_package("vue-language-server")
-						:get_install_path() .. "/node_modules/@vue/language-server" .. "/node_modules/@view/typescript-plugin"
-
-					require("lspconfig").ts_ls.setup({
-						init_options = {
-							plugins = {
-								{
-									name = "@vue/typescript-plugin",
-									location = vue_typescript_plugin,
-									languages = { "javascript", "typescript", "vue" },
-								},
-							},
-						},
-						filetypes = {
-							"javascript",
-							"javascriptreact",
-							"javascript.jsx",
-							"typescript",
-							"typescriptreact",
-							"typescript.tsx",
-							"vue",
-						},
-					})
-				end,
-				ruby_lsp = function()
-					require("lspconfig").ruby_lsp.setup({
-						capabilities = capabilities,
-						filetypes = { "ruby", "eruby" },
-					})
-				end,
-
-				lua_ls = function()
-					require("lspconfig").lua_ls.setup({
-						capabilities = capabilities,
-						settings = {
-							Lua = {
-								runtime = { version = "LuaJIT" },
-								diagnostics = {
-									globals = { "vim" },
-								},
-								workspace = {
-									library = {
-										vim.env.VIMRUNTIME,
-									},
-								},
-							},
-						},
-					})
+					local handler_config = langs.handlers[server_name] or langs.handlers.default
+					require("lspconfig")[server_name].setup(handler_config(capabilities))
 				end,
 			},
 		})
-
-		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 		cmp.setup({
 			snippet = {

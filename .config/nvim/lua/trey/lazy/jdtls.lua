@@ -1,5 +1,8 @@
 return {
 	"mfussenegger/nvim-jdtls",
+	cond = function()
+		return vim.fn.executable("java") == 1
+	end,
 	dependencies = {
 		"williamboman/mason.nvim",
 	},

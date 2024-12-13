@@ -1,3 +1,4 @@
+local langs = require("trey.languages")
 return {
 	{
 		"stevearc/conform.nvim",
@@ -13,28 +14,7 @@ return {
 			},
 		},
 		opts = {
-			formatters_by_ft = {
-				lua = { "stylua" },
-				java = { "google-java-format" },
-				go = { "goimports", "gofmt" },
-				templ = { "templ" },
-				javascript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescript = { "prettier" },
-				typescriptreact = { "prettier" },
-				json = { "prettier" },
-				html = { "prettier" },
-				css = { "prettier" },
-				php = { "pint" },
-				blade = { "blade-formatter" },
-				vue = { "prettier" },
-				ruby = { "rubocop" },
-				eruby = { "erb_format" },
-				svelte = { "prettier" },
-				fortran = { "findent" },
-				astro = { "prettier" },
-				ocaml = { "ocamlformat" },
-			},
+			formatters_by_ft = langs.formatters,
 			format_on_save = {
 				timeout_ms = 1001,
 				lsp_fallback = true,
