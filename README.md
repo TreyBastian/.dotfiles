@@ -13,17 +13,12 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 - Wezterm 
 - git
 - zsh
-- nvm
-- sdkman
-- rbenv
-- opm
 
 ### Configured Languages
    
-Configuration assumes you have everying required to run these langs.
-If you don't edit the conform, lsp, and remove any other plugins associated with
-languages you want to remove.
-
+Configuration only loads languages that are installed on the system. So should work out of the box.
+> [!WARNING]  
+>  Neotest is temporarily disabled while I work out some kinks with this new setup
 - lua
   - lua-language-server
   - stylua
@@ -48,9 +43,8 @@ languages you want to remove.
    - prettier
    - eslint
    - ts_ls
-     - *vue support requires `@vue/typescript-plugin` to be installed globally*
-   - volar (vue)
    - svelte
+   - astro
    - neotest support (jest and vitest) 
 - bash
   - bashls
@@ -61,17 +55,6 @@ languages you want to remove.
   - jsonls
 - COBOL
   - cobol-language-support
-- PHP
-  - intelephense
-  - laravel
-  - laravel-blade-nav
-  - pint
-  - neotest support (pest)
-- Ruby
-  - ruby_lsp
-  - rubocop
-  - erb_formatter
-  - neotest support (rspec)
 - Fortran
   - fortran-language-server
   - findent (formatter)
@@ -89,8 +72,3 @@ curl -Lks https://raw.githubusercontent.com/TreyBastian/.dotfiles/main/bootstrap
 
 ## TODO
 - bootstrap script auto install required software and dependencies
-
-## Acknowledgements
-This configuration takes various inspiration from:
-- [ThePrimagen](https://github.com/theprimeagen) - Vim
-- [Jess Archer](https://github.com/jessarcher) - PHP and Vue
