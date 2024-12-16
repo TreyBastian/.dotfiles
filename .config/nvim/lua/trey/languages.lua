@@ -38,8 +38,8 @@ if vim.fn.executable("java") == 1 then
 		return {}
 	end
 	M.formatters["java"] = { "google-java-format" }
-	table.insert(M.testers.deps, "rcasia/neotest-java")
-	table.insert(M.testers.adapters, "neotest-java")
+	-- table.insert(M.testers.deps, "rcasia/neotest-java")
+	-- table.insert(M.testers.adapters, "neotest-java")
 end
 if vim.fn.executable("go") == 1 then
 	table.insert(M.servers, "gopls")
@@ -47,7 +47,7 @@ if vim.fn.executable("go") == 1 then
 	M.formatters["go"] = { "gofmt", "goimports" }
 	M.formatters["templ"] = { "templ" }
 	table.insert(M.testers.deps, "nvim-neotest/neotest-go")
-	table.insert(M.testers.adapters, 'neotest-go')
+	table.insert(M.testers.adapters, "neotest-go")
 
 	vim.filetype.add({
 		extension = { templ = "templ" },

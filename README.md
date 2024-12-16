@@ -17,8 +17,7 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 ### Configured Languages
    
 Configuration only loads languages that are installed on the system. So should work out of the box.
-> [!WARNING]  
->  Neotest is temporarily disabled while I work out some kinks with this new setup
+
 - lua
   - lua-language-server
   - stylua
