@@ -1,0 +1,5 @@
+theme = dark:catppuccin-frappe,light:catppuccin-latte
+font-thicken = true
+font-size = 16 
+
+keybind = global:cmd+ctrl+t=toggle_quick_terminal
