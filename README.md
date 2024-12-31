@@ -10,9 +10,10 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 - fzf
 - Neovim
 - tree-sitter
-- Wezterm 
+- ghostty 
 - git
 - zsh
+- oh-my-zsh
 
 ### Configured Languages
    
@@ -60,7 +61,8 @@ Configuration only loads languages that are installed on the system. So should w
 - Ocaml
     - ocaml-lsp
     - ocamlformat
-
+- Godot (gdscript)
+    - some setup required see [instructions](https://www.reddit.com/r/neovim/comments/1c2bhcs/godotgdscript_in_neovim_with_lsp_and_debugging_in/)
 
 ## Installation Instructions
 To install my dotfiles run this command. It will backup any pre-existing dotfiles.
