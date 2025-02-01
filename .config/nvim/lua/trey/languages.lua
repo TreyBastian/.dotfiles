@@ -32,6 +32,18 @@ M.handlers["lua_ls"] = function(capabilities)
 	}
 end
 M.formatters["lua"] = { "stylua" }
+M.handlers["gdscript"] = function(capabilities)
+	local gdscript_cmd = vim.lsp.rpc.connect("127.0.0.1", 6005)
+	if vim.fn.has("win32") or vim.fn.has("win64") then
+		---@diagnostic disable-next-line: cast-local-type
+		gdscript_cmd = { "ncat", "127.0.0.1", "6005" }
+	end
+	return {
+		name = "godot",
+		capabilities = capabilities,
+		cmd = gdscript_cmd,
+	}
+end
 if vim.fn.executable("java") == 1 then
 	table.insert(M.servers, "jdtls")
 	M.handlers["jdtls"] = function()

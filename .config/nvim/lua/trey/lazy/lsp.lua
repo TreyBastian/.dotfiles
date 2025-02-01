@@ -82,13 +82,6 @@ return {
 			},
 		})
 
-		-- godot requires a bit of a different config
-		require("lspconfig")["gdscript"].setup({
-			name = "godot",
-			-- TODO: swap out rpc for ncat for windows
-			cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
-		})
-
 		cmp.setup({
 			snippet = {
 				expand = function(args)
