@@ -6,7 +6,6 @@ M.testers = {
 	deps = {},
 	adapters = {},
 }
-
 table.insert(M.servers, "lua_ls")
 M.handlers.default = function(capabilities)
 	return {
@@ -66,6 +65,7 @@ if vim.fn.executable("go") == 1 then
 	})
 end
 if vim.fn.executable("node") == 1 then
+	table.insert(M.servers, "ltex")
 	table.insert(M.servers, "ts_ls")
 	table.insert(M.servers, "emmet_ls")
 	table.insert(M.servers, "cssls")
