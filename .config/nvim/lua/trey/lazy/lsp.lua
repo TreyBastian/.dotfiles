@@ -82,6 +82,9 @@ return {
 			},
 		})
 
+		-- GODOT is a special case lets handle it
+		require("lspconfig")["gdscript"].setup(langs.handlers["gdscript"](capabilities))
+
 		cmp.setup({
 			snippet = {
 				expand = function(args)
