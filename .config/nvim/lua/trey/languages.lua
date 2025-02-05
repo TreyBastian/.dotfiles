@@ -31,6 +31,7 @@ M.handlers["lua_ls"] = function(capabilities)
 	}
 end
 M.formatters["lua"] = { "stylua" }
+
 M.handlers["gdscript"] = function(capabilities)
 	local gdscript_cmd = vim.lsp.rpc.connect("127.0.0.1", 6005)
 	if vim.fn.has("win32") or vim.fn.has("win64") then
@@ -43,6 +44,12 @@ M.handlers["gdscript"] = function(capabilities)
 		cmd = gdscript_cmd,
 	}
 end
+if vim.fn.executable("python") == 1 then
+	-- yes we need python for godot tools, yes I hate it
+	M.formatters["gdscript"] = { "gdformat" }
+end
+M.formatters["gdshader"] = { "clang-format" }
+
 if vim.fn.executable("java") == 1 then
 	table.insert(M.servers, "jdtls")
 	M.handlers["jdtls"] = function()
