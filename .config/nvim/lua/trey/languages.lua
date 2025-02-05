@@ -44,7 +44,7 @@ M.handlers["gdscript"] = function(capabilities)
 		cmd = gdscript_cmd,
 	}
 end
-if vim.fn.executable("python") == 1 then
+if vim.fn.executable("python") == 1 or vim.fn.executable("python3") == 1 then
 	-- yes we need python for godot tools, yes I hate it
 	M.formatters["gdscript"] = { "gdformat" }
 end
