@@ -103,12 +103,21 @@ if vim.fn.executable("ocaml") == 1 then
 	table.insert(M.servers, "ocamllsp")
 	M.formatters["ocaml"] = { "ocamlformat" }
 end
+
 if vim.fn.executable("cobc") == 1 then
 	table.insert(M.servers, "cobol_ls")
 end
+
 if vim.fn.executable("gfortran") == 1 then
 	table.insert(M.servers, "fortls")
 	M.formatters["fortran"] = { "findent" }
+end
+
+if vim.fn.executable("dotnet") == 1 then
+	table.insert(M.servers, "omnisharp")
+	M.formatters["csharp"] = { "csharpier" }
+	table.insert(M.testers.deps, "Issafalcon/neotest-dotnet")
+	table.insert(M.testers.adapters, "neotest-dotnet")
 end
 
 return M
