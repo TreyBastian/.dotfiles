@@ -115,7 +115,7 @@ end
 
 if vim.fn.executable("dotnet") == 1 then
 	table.insert(M.servers, "omnisharp")
-	M.formatters["csharp"] = { "csharpier" }
+	M.formatters["cs"] = { "csharpier" }
 	table.insert(M.testers.deps, "Issafalcon/neotest-dotnet")
 	table.insert(M.testers.adapters, "neotest-dotnet")
 end
