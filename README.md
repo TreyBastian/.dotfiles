@@ -15,6 +15,10 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 - zsh
 - oh-my-zsh
 
+> [!IMPORTANT]  
+> **Windows Users**
+> You must set the environment variable `XDG_CONFIG_HOME` to `~/.config`
+
 ### Configured Languages
    
 Configuration only loads languages that are installed on the system. So should work out of the box.
