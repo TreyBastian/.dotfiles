@@ -34,7 +34,7 @@ M.formatters["lua"] = { "stylua" }
 
 M.handlers["gdscript"] = function(capabilities)
 	local gdscript_cmd = vim.lsp.rpc.connect("127.0.0.1", 6005)
-	if vim.fn.has("win32") or vim.fn.has("win64") then
+	if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
 		---@diagnostic disable-next-line: cast-local-type
 		gdscript_cmd = { "ncat", "127.0.0.1", "6005" }
 	end
