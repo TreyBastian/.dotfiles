@@ -68,6 +68,7 @@ Configuration only loads languages that are installed on the system. So should w
 - Godot (gdscript)
     - some setup required see [instructions](https://www.reddit.com/r/neovim/comments/1c2bhcs/godotgdscript_in_neovim_with_lsp_and_debugging_in/)
     - gdtoolkit (formatter and linter)
+    - dap support
 - C# (dotnet)
     - omnisharp
     - dotnet-format
