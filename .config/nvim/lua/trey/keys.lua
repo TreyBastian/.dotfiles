@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = ";"
 
 vim.keymap.set("x", "p", [["_dP]])
 

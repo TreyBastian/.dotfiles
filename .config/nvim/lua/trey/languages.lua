@@ -6,6 +6,10 @@ M.testers = {
 	deps = {},
 	adapters = {},
 }
+M.dap = {
+	configurations = {},
+	adapters = {},
+}
 table.insert(M.servers, "lua_ls")
 M.handlers.default = function(capabilities)
 	return {
@@ -32,6 +36,20 @@ M.handlers["lua_ls"] = function(capabilities)
 end
 M.formatters["lua"] = { "stylua" }
 
+M.dap.adapters["godot"] = {
+	type = "server",
+	host = "127.0.0.1",
+	port = 6006,
+}
+M.dap.configurations["gdscript"] = {
+	{
+		type = "godot",
+		request = "launch",
+		name = "Launch scene",
+		project = "${workspaceFolder}",
+		launch_scene = true,
+	},
+}
 M.handlers["gdscript"] = function(capabilities)
 	local gdscript_cmd = vim.lsp.rpc.connect("127.0.0.1", 6005)
 	if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
