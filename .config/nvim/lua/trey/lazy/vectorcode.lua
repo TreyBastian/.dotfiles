@@ -1,0 +1,22 @@
+return {
+	--
+	-- "Davidyz/VectorCode",
+	-- version = "*",
+	-- dependencies = { "nvim-lua/plenary.nvim" },
+	-- build = "pipx upgrade vectorcode",
+	-- cmd = "VectorCode",
+	-- config = function()
+	-- 	vim.api.nvim_create_autocmd("LspAttach", {
+	-- 		callback = function()
+	-- 			local bufnr = vim.api.nvim_get_current_buf()
+	-- 			local cacher = require("vectorcode.cacher")
+	-- 			cacher.async_check("config", function()
+	-- 				cacher.register_buffer(bufnr, {
+	-- 					n_query = 10,
+	-- 				})
+	-- 			end, nil)
+	-- 		end,
+	-- 		desc = "Register buffer for VectorCode",
+	-- 	})
+	-- end,
+}
