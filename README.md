@@ -1,4 +1,7 @@
 # Trey's Dotfiles
+> [!WARNING]
+> This is my branch to toy with AI features with ollama,
+> Use these at your own risk
 
 These are all of my dotfiles. This works for me, it might not work for you.
 I suggest taking these configurations and tweaking them to work for you.
@@ -14,6 +17,10 @@ You should also totally watch me live on [Twitch](https://twitch.tv/trey_bastian
 - git
 - zsh
 - oh-my-zsh
+- pipx
+- vectorcode
+- remote chromadb server
+- remote ollama setup
 
 > [!IMPORTANT]  
 > **Windows Users**
