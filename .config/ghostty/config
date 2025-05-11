@@ -1,4 +1,4 @@
-theme = dark:modus_vivendi,light:modus_operandi
+theme = dark:"Monokai Pro",light:"Monokai Pro Light"
 font-thicken = true
 font-size = 16 
 
