@@ -71,7 +71,8 @@ Configuration only loads languages that are installed on the system. So should w
     - dap support
 - C# (dotnet)
     - omnisharp
-    - dotnet-format
+    - csharpier 
+    - omnishparp-extended for gd etc
     - neotest support
 
 ## Installation Instructions

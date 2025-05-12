@@ -42,6 +42,7 @@ return {
 				vim.keymap.set("n", "K", function()
 					vim.lsp.buf.hover()
 				end, opts)
+				-- we need to handle some of these options differently for c#
 				if ft == "cs" then
 					vim.keymap.set("n", "gd", function()
 						require("omnisharp_extended").lsp_definitions()
