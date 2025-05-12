@@ -38,25 +38,38 @@ return {
 		vim.api.nvim_create_autocmd("LspAttach", {
 			callback = function(event)
 				local opts = { buffer = event.buf }
-
+				local ft = vim.bo[event.buf].filetype
 				vim.keymap.set("n", "K", function()
 					vim.lsp.buf.hover()
 				end, opts)
-				vim.keymap.set("n", "gd", function()
-					vim.lsp.buf.definition()
-				end, opts)
+				if ft == "cs" then
+					vim.keymap.set("n", "gd", function()
+						require("omnisharp_extended").lsp_definitions()
+					end, opts)
+					vim.keymap.set("n", "gr", function()
+						require("omnisharp_extended").telescope_lsp_references()
+					end, opts)
+					vim.keymap.set("n", "gi", function()
+						require("omnisharp_extended").lsp_implementation()
+					end, opts)
+				else
+					vim.keymap.set("n", "gd", function()
+						vim.lsp.buf.definition()
+					end, opts)
+					vim.keymap.set("n", "gr", function()
+						require("telescope.builtin").lsp_references()
+					end, opts)
+					vim.keymap.set("n", "gi", function()
+						vim.lsp.buf.implementation()
+					end, opts)
+				end
 				vim.keymap.set("n", "gD", function()
 					vim.lsp.buf.declaration()
-				end, opts)
-				vim.keymap.set("n", "gi", function()
-					vim.lsp.buf.implementation()
 				end, opts)
 				vim.keymap.set("n", "go", function()
 					vim.lsp.buf.type_definition()
 				end, opts)
-				vim.keymap.set("n", "gr", function()
-					require("telescope.builtin").lsp_references()
-				end, opts)
+
 				vim.keymap.set("n", "gs", function()
 					vim.lsp.buf.signature_help()
 				end, opts)

@@ -133,6 +133,17 @@ end
 
 if vim.fn.executable("dotnet") == 1 then
 	table.insert(M.servers, "omnisharp")
+	M.handlers["omnisharp"] = function(capabilities)
+		return {
+			capabilities = capabilities,
+			settings = {
+				RoslynExtensionsOptions = {
+					EnableDecompilationSupport = true,
+					EnableAnalyzersSupport = true,
+				},
+			},
+		}
+	end
 	table.insert(M.servers, "omnisharp_mono")
 	M.formatters["cs"] = { "csharpier" }
 	table.insert(M.testers.deps, "Issafalcon/neotest-dotnet")
