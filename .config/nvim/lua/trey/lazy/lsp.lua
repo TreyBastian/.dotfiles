@@ -108,7 +108,7 @@ return {
 			preselect = cmp.PreselectMode.None,
 			mapping = cmp.mapping.preset.insert({
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
-				["<C-SPACE>"] = cmp.mapping.complete(),
+				["<A-SPACE>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
