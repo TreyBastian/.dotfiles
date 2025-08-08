@@ -1,14 +1,11 @@
 return {
 	{
-		"loctvl842/monokai-pro.nvim",
+		"zenbones-theme/zenbones.nvim",
+		dependencies = { "rktjmp/lush.nvim" },
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("monokai-pro").setup({
-				terminal_colors = true,
-				devicons = true,
-			})
-			vim.cmd.colorscheme("monokai-pro")
+			vim.cmd.colorscheme("zenbones")
 		end,
 	},
 	{
@@ -16,10 +13,10 @@ return {
 		opts = {
 			update_interval = 1000,
 			set_dark_mode = function()
-				vim.cmd.colorscheme("monokai-pro")
+				vim.o.background = "dark"
 			end,
 			set_light_mode = function()
-				vim.cmd.colorscheme("monokai-pro-light")
+				vim.o.background = "light"
 			end,
 		},
 		config = true,
