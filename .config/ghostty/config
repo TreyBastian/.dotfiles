@@ -1,4 +1,4 @@
-theme = dark:"Monokai Pro",light:"Monokai Pro Light"
+theme = dark:"zenbones_dark",light:"zenbones_light"
 font-thicken = true
 font-size = 16 
 font-style = SemiBold

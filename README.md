@@ -74,6 +74,9 @@ Configuration only loads languages that are installed on the system. So should w
     - csharpier 
     - omnishparp-extended for gd etc
     - neotest support
+- Elixir
+    - elixir-ls
+    - neotest support
 
 ## Installation Instructions
 To install my dotfiles run this command. It will backup any pre-existing dotfiles.

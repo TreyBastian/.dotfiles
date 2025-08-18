@@ -131,6 +131,15 @@ if vim.fn.executable("gfortran") == 1 then
 	M.formatters["fortran"] = { "findent" }
 end
 
+if vim.fn.executable("elixir") == 1 then
+	table.insert(M.servers, "elixirls")
+	M.formatters["elixir"] = { "mix" }
+	M.formatters["eex"] = { "mix" }
+	M.formatters["heex"] = { "mix" }
+	table.insert(M.testers.deps, "jfpedroza/neotest-elixir")
+	table.insert(M.testers.adapters, "neotest-elixir")
+end
+
 if vim.fn.executable("dotnet") == 1 then
 	table.insert(M.servers, "omnisharp")
 	M.handlers["omnisharp"] = function(capabilities)
@@ -149,5 +158,4 @@ if vim.fn.executable("dotnet") == 1 then
 	table.insert(M.testers.deps, "Issafalcon/neotest-dotnet")
 	table.insert(M.testers.adapters, "neotest-dotnet")
 end
-
 return M
