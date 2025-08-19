@@ -18,7 +18,6 @@ return {
 			table.insert(adapters, require(adapter))
 		end
 
-		print(vim.inspect(adapters))
 		require("neotest").setup({
 			adapters = adapters,
 		})
